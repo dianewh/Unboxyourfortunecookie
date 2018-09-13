@@ -4,7 +4,7 @@
   "description": "All the delight of opening a Fortune Cookie everytime you open your default tab.",
   "version": "1",
   "author": "Diane Huang",
- "browser_action": {
+  "browser_action": {
     "default_icon": "/media/fortune-cookie64.png",
     "default_title": "Have a nice day",
     "default_popup": "popup.html"
@@ -15,7 +15,7 @@
     "128": "/media/fortune-cookie128.png"
   },
  "chrome_url_overrides" : {
-   "newtab": "client/dist/newtab.html"
+   "newtab": "newtab.html"
  },
   "permissions": ["activeTab"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
