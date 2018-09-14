@@ -5,29 +5,24 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="newTab.css">
+    <script src="/lib/jquery-3.3.1.min.js"></script>
     <title>Have A Nice Day! :)</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
   </head>
   <body>
-    <h1></h1>
-    <div class="welcome">
-      <div class="container">
-        Welcome
-        <img class="cookiepicture" src="/media/fortune-cookie-unopened.jpg"></img>
-        <button onClick={this.openCookie.bind(this)}> Open Cookie </button>
+    <div class="container">
+      <div class="welcome">
+        <h1></h1>
       </div>
-     
-    </div>
-    <div> 
-        <input
+      <img id="cookiepicture" src="/media/fortune-cookie-unopened.jpg" /> 
+      <div id="fortuneMessage">Click to unbox your fortune</div>
+      <input
         type="add"
         class="addFortuneBox"
         placeholder="Enter to Add Fortune"/>
-    </div>
-    <div class="footer">
-      Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-    </div>
+      <footer>
+        Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      </footer>
+    </div> 
   </body>
 
   <script src="newTab.js"></script>
