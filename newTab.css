@@ -29,6 +29,10 @@ footer {
   width: 50%;
 }
 
+#cookiepicture:hover {
+	cursor: pointer;
+}
+
 #fortuneMessage{
 	font-size: 24pt;
 	max-width: 100%;
