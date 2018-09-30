@@ -1,13 +1,14 @@
 $(document).ready(function() {
   var fortunes = [
-		"A mediocre future lies ahead of you",
-		"Have a just ok day",
+		"A lovely future lies ahead of you",
+		"Stay strong and carry on",
+		"This month you will find true love (for React)",
+		"A new adventure awaits",
 		"Be as awesome as Rebecca... or at least try",
 		"Today will be the best day to date-- find someone to share it with",
 		"HR99 is the *awesomest*",
-		"Shame on you, Duss",
-		"You will get a job! (If you apply to min 25 a week, with reach out, study hard, and keep in *perfect* contact with Rebecca and Rashid :)",
-		"You're a great egg"
+		"You're a great egg",
+		
 	];
 
 	var image = [
@@ -19,8 +20,31 @@ $(document).ready(function() {
 		var fortune = fortunes[Math.floor(Math.random() * fortunes.length )];
 		console.log("fortune", fortune);
 		$('#fortuneMessage').text(fortune);
-		$('#cookiepicture').attr("src", "/media/fortune-cookie-opened.jpg");
-  });
+		$('#cookiepicture').attr("src", image[1]);
+		
+	});
+	
+	$('#newCookie').on('click', function(event) {
+		$('#fortuneMessage').text("Click cookie to unbox your fortune");
+		$('#cookiepicture').attr("src", image[0]);
+	});
+
+	// add UserFortune
+	$('#addFortune').on('click', function(event) {
+		var newFortune = $('#newFortune').val();
+		console.log(newFortune);
+		console.log(newFortune);
+		fortunes.push(newFortune);
+
+		// change to database save below
+		// $.ajax({
+		//     url: "/YourPostUrlHere",
+		//     type: "POST",
+		//     data: { 'fortune': $("#newFortune").val()) },
+		//     success: function (result) {
+		//         //Do whatever you want with the result.
+		//     }
+		// });
 });
 
 

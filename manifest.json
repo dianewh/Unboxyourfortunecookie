@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "UnboxYourFortune(Cookie)",
-  "description": "All the delight of opening a Fortune Cookie everytime you open your default tab.",
+  "description": "All the delight of opening a Fortune Cookie each time you open a new tab.",
   "version": "1",
   "author": "Diane Huang",
   "browser_action": {
