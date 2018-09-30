@@ -19,6 +19,10 @@ $(document).ready(function() {
   $('#cookiepicture').on('click', function(event) {
 		var fortune = fortunes[Math.floor(Math.random() * fortunes.length )];
 		console.log("fortune", fortune);
+
+		// add an animation here for opening new cookie -> curtains opening?
+		// cookie cracking
+		// add crunch sound effect here
 		$('#fortuneMessage').text(fortune);
 		$('#cookiepicture').attr("src", image[1]);
 		
@@ -29,22 +33,31 @@ $(document).ready(function() {
 		$('#cookiepicture').attr("src", image[0]);
 	});
 
-	// add UserFortune
+	
 	$('#addFortune').on('click', function(event) {
-		var newFortune = $('#newFortune').val();
-		console.log(newFortune);
-		console.log(newFortune);
+		var newFortune = $('#newFortune').val()
+		console.log("Added following new fortune: ", newFortune)
 		fortunes.push(newFortune);
 
-		// change to database save below
+		// add Notification or Animation so User knows Fortune entered
+		// ie popup notification
+
+		// later add server, and send fortune to local database 
+		// -- or a hosted database on Amazon AWS? 
+
+		// add a filtering function which filters data before adding to cloud database
+
 		// $.ajax({
-		//     url: "/YourPostUrlHere",
-		//     type: "POST",
-		//     data: { 'fortune': $("#newFortune").val()) },
-		//     success: function (result) {
-		//         //Do whatever you want with the result.
-		//     }
+		// 	url: "/someurlhere for the server ---> host server and database somewhere",
+		// 	type: "POST",
+		// 	data: { 'age': newFortune },
+		// 	success: function (result) {
+		// 			// notify user that fortune has been added!
+		// 	}
 		// });
+	});
+
+
 });
 
 
