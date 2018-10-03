@@ -1,11 +1,16 @@
 $(document).ready(function() {
-  $('#addFortune').on('click', function(event) {
-		var newFortune = $('#newFortune').val()
-		console.log("Added following new fortune: ", newFortune)
-		fortunes.push(newFortune);
+  var crunch = new Audio("file.wav");
 
-		// add Notification or Animation so User knows Fortune entered
-		// ie popup notification
+  $('#addFortune').on('click', function(event) {
+    crunch.play();
+
+    var newFortune = $('#newFortune').val();
+    
+    // change cursor to loading
+    // edit this to be prettier pop up alert / confirmation
+    alert(`Input received! The following fortune will be added: ${newFortune}`);
+    $('#newFortune').val('');
+    // return cursor to normal
 
 		// later add server, and send fortune to local database 
 		// -- or a hosted database on Amazon AWS? 
@@ -15,9 +20,9 @@ $(document).ready(function() {
 		// $.ajax({
 		// 	url: "/someurlhere for the server ---> host server and database somewhere",
 		// 	type: "POST",
-		// 	data: { 'age': newFortune },
+		// 	data: { 'fortune': newFortune },
 		// 	success: function (result) {
-		// 			// notify user that fortune has been added!
+    // 			// notify user that fortune has been added!
 		// 	}
 		// });
 	});
