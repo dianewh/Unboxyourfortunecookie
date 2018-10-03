@@ -12,8 +12,8 @@ $(document).ready(function() {
 	];
 
 	var image = [
-		"/media/fortune-cookie-unopened.jpg",
-		"/media/fortune-cookie-opened.jpg",
+		"https://s3-us-west-1.amazonaws.com/sideprojectmedia/UnBoxYourFortune(cookie)/fortune-cookie-unopened.jpg",
+		"https://s3-us-west-1.amazonaws.com/sideprojectmedia/UnBoxYourFortune(cookie)/fortune-cookie-opened.jpg",
 	];
 
   $('#cookiepicture').on('click', function(event) {

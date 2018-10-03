@@ -10,7 +10,7 @@
     "default_popup": "popup.html"
   },
   "icons": {
-    "16": "/media/fortune-cookie128.png",
+    "16": "/media/fortune-cookie16.png",
     "48": "/media/fortune-cookie128.png",
     "128": "/media/fortune-cookie128.png"
   },
