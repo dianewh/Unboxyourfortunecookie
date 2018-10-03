@@ -10,7 +10,10 @@ $(document).ready(function() {
 		"You're a great egg",
 		
 	];
-
+	
+	var leftcookie = "<img id=\"leftcookie\" src=\"https://s3-us-west-1.amazonaws.com/sideprojectmedia/UnBoxYourFortune(cookie)/left-cookie.jpg\" />"
+	var rightcookie = "<img id=\"rightcookie\" src=\"https://s3-us-west-1.amazonaws.com/sideprojectmedia/UnBoxYourFortune(cookie)/right-cookie.jpg\" />"
+	
 	var image = [
 		"https://s3-us-west-1.amazonaws.com/sideprojectmedia/UnBoxYourFortune(cookie)/fortune-cookie-unopened.jpg",
 		"https://s3-us-west-1.amazonaws.com/sideprojectmedia/UnBoxYourFortune(cookie)/fortune-cookie-opened.jpg",
@@ -19,20 +22,17 @@ $(document).ready(function() {
   $('#cookiepicture').on('click', function(event) {
 		var fortune = fortunes[Math.floor(Math.random() * fortunes.length )];
 		console.log("fortune", fortune);
-
+		var newContent = $('<div id=\"newContent\">')
+		newContent.append(leftcookie).append(`<div id=\"fortuneMessage\" >${fortune}</div>`)
+		newContent.append(rightcookie);
 		// add an animation here for opening new cookie -> curtains opening?
 		// cookie cracking
 		// add crunch sound effect here
-		$('#fortuneMessage').text(fortune);
-		$('#cookiepicture').attr("src", image[1]);
+		$('#content').replaceWith(newContent)
+		// $('#fortuneMessage').text(fortune);
+		// $('#cookiepicture').attr("src", image[1]);
 		
 	});
-	
-	$('#newCookie').on('click', function(event) {
-		$('#fortuneMessage').text("Click cookie to unbox your fortune");
-		$('#cookiepicture').attr("src", image[0]);
-	});
-
 	
 	$('#addFortune').on('click', function(event) {
 		var newFortune = $('#newFortune').val()
