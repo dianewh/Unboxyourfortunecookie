@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  var crunch = new Audio("file.wav");
+  // var crunch = new Audio("file.wav");
 
   $('#addFortune').on('click', function(event) {
-    crunch.play();
+    // crunch.play();
 
     var newFortune = $('#newFortune').val();
     
